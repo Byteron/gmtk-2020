@@ -8,15 +8,117 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Character",
+"language": "GDScript",
+"path": "res://source/character/Character.gd"
+}, {
+"base": "Node",
+"class": "FiniteStateMachine",
+"language": "GDScript",
+"path": "res://addons/finite_state_machine/source/FiniteStateMachine.gd"
+}, {
+"base": "YSort",
+"class": "Herd",
+"language": "GDScript",
+"path": "res://source/game/Herd.gd"
+}, {
+"base": "Area2D",
+"class": "Interactable",
+"language": "GDScript",
+"path": "res://source/interactable/Interactable.gd"
+}, {
+"base": "Node",
+"class": "MusicBooth",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/music/MusicBooth.gd"
+}, {
+"base": "Character",
+"class": "Player",
+"language": "GDScript",
+"path": "res://source/character/player/Player.gd"
+}, {
+"base": "Character",
+"class": "Predator",
+"language": "GDScript",
+"path": "res://source/character/predator/Predator.gd"
+}, {
+"base": "Node",
+"class": "SceneLoader",
+"language": "GDScript",
+"path": "res://addons/scene_manager/source/SceneLoader.gd"
+}, {
+"base": "Character",
+"class": "Sheep",
+"language": "GDScript",
+"path": "res://source/character/sheep/Sheep.gd"
+}, {
+"base": "Node",
+"class": "Song",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/music/Song.gd"
+}, {
+"base": "Node",
+"class": "Sound",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/sfx/Sound.gd"
+}, {
+"base": "Node",
+"class": "SoundBooth",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/sfx/SoundBooth.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://addons/finite_state_machine/source/State.gd"
+}, {
+"base": "Node",
+"class": "StingerContainer",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/music/containers/StingerContainer.gd"
+}, {
+"base": "Node",
+"class": "TrackContainer",
+"language": "GDScript",
+"path": "res://addons/audio_booth/source/music/containers/TrackContainer.gd"
+} ]
 _global_script_class_icons={
-
+"Character": "",
+"FiniteStateMachine": "",
+"Herd": "",
+"Interactable": "",
+"MusicBooth": "",
+"Player": "",
+"Predator": "",
+"SceneLoader": "",
+"Sheep": "",
+"Song": "",
+"Sound": "",
+"SoundBooth": "",
+"State": "",
+"StingerContainer": "",
+"TrackContainer": ""
 }
 
 [application]
 
+config/name="GMTK 2020"
 run/main_scene="res://source/menu/TitleScreen.tscn"
+
+[autoload]
+
+Scene="*res://addons/scene_manager/source/Scene.tscn"
+Global="*res://source/global/Global.gd"
+Music="*res://source/global/Music.tscn"
+SFX="*res://source/global/SFX.tscn"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "audio_booth", "finite_state_machine", "scene_manager" )
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 environment/default_environment="res://default_env.tres"
