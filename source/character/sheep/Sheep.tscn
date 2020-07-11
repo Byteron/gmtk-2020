@@ -18,7 +18,6 @@ radius = 57.9511
 "Sheep",
 ] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-flee_radius = 320
 
 [node name="CollisionShape2D" parent="." index="2"]
 shape = SubResource( 1 )

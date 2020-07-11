@@ -23,7 +23,7 @@ func update(host: Node, delta: float) -> void:
 		else:
 			direction.linear_interpolate(predator.global_position.direction_to(sheep.global_position), 0.5) 
 			
-		if predator.global_position.distance_to(sheep.global_position) < sheep.flee_radius:
+		if predator.global_position.distance_to(sheep.global_position) < predator.menace:
 			walk = true
 	
 	if walk:

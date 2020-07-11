@@ -1,5 +1,5 @@
-extends Character
-class_name Player
+extends Predator
+class_name Shepherd
 
 
 func _ready() -> void:

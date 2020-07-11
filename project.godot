@@ -35,11 +35,6 @@ _global_script_classes=[ {
 "path": "res://addons/audio_booth/source/music/MusicBooth.gd"
 }, {
 "base": "Character",
-"class": "Player",
-"language": "GDScript",
-"path": "res://source/character/player/Player.gd"
-}, {
-"base": "Character",
 "class": "Predator",
 "language": "GDScript",
 "path": "res://source/character/predator/Predator.gd"
@@ -53,6 +48,11 @@ _global_script_classes=[ {
 "class": "Sheep",
 "language": "GDScript",
 "path": "res://source/character/sheep/Sheep.gd"
+}, {
+"base": "Predator",
+"class": "Shepherd",
+"language": "GDScript",
+"path": "res://source/character/predator/shepherd/Shepherd.gd"
 }, {
 "base": "Node",
 "class": "Song",
@@ -90,10 +90,10 @@ _global_script_class_icons={
 "Herd": "",
 "Interactable": "",
 "MusicBooth": "",
-"Player": "",
 "Predator": "",
 "SceneLoader": "",
 "Sheep": "",
+"Shepherd": "",
 "Song": "",
 "Sound": "",
 "SoundBooth": "",

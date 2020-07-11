@@ -1,8 +1,6 @@
 extends Character
 class_name Sheep
 
-export var flee_radius := 150
-
 onready var safe_zone := $SafeZone
 
 var herd : Herd = null
@@ -43,7 +41,7 @@ func is_predator_nearby() -> bool:
 		if not predator:
 			continue
 		
-		if global_position.distance_to(predator.global_position) < flee_radius:
+		if global_position.distance_to(predator.global_position) < predator.menace:
 			return true
 	
 	return false
