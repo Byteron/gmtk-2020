@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://graphics/images/TREE.png" type="Texture" id=1]
+
+[node name="Area2D" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -650 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." groups=[
+"Obstacle",
+]]
+position = Vector2( 1, -1 )
+polygon = PoolVector2Array( 23.2166, -96.5991, 105.334, -86.2164, 98.7266, -131.522, 183.675, -131.522, 159.135, -174.941, 284.67, -193.818, 283.726, -234.405, 177.068, -249.507, 206.328, -341.062, 82.6807, -301.42, 38.3186, -322.185, -43.7985, -360.884, -53.2372, -297.644, -140.074, -286.318, -92.8799, -230.629, -230.686, -208.92, -134.41, -154.175, -150.456, -72.0583, -106.094, -34.3033, -20.2017, -11.6504 )

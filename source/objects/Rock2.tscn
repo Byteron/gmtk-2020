@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://graphics/images/ROCK2.png" type="Texture" id=1]
+
+[node name="Rock2" type="StaticBody2D" groups=[
+"Obstacle",
+]]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -80 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 4.36353, 118.407 )
+polygon = PoolVector2Array( -33.1633, -0.758209, 93.4587, 1.13165, 201.182, 0.501709, 345.443, -119.191, 314.575, -257.782, 10.304, -311.329, -266.879, -305.659, -308.456, -116.671, -132.697, 1.13165 )
