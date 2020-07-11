@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://source/interactable/Interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://source/interactable/water/Lake.gd" type="Script" id=2]
+[ext_resource path="res://graphics/images/LAKE.PNG" type="Texture" id=3]
+
+[node name="Lake" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
+polygon = PoolVector2Array( -165.52, -145.785, -64.4374, -185.029, 157.944, -194.542, 443.354, -139.839, 463.57, -20.918, 410.056, 74.2185, 437.408, 136.057, 291.135, 191.95, 363.677, 235.951, -85.8431, 187.193, -234.494, 216.923, -279.684, 163.409, -362.928, 144.382, -335.577, 64.7048, -423.578, 34.9747, -441.416, -86.3244 )

@@ -5,6 +5,7 @@ export var speed := 350
 
 func enter(host: Node) -> void:
 	var shepherd := host as Shepherd
+	shepherd.anim.play("walk")
 
 
 func update(host: Node, delta: float) -> void:

@@ -6,6 +6,10 @@ func _ready() -> void:
 	change_state("Idle")
 
 
+func step() -> void:
+	SFX.play_sfx("ShepherdFootstep")
+
+
 func get_input_direction() -> Vector2:
 
 	var up = Input.is_action_pressed("walk_up")
