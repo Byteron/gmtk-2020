@@ -31,7 +31,7 @@ func update(host: Node, delta: float) -> void:
 	else:
 		sheep.speed = clamp(sheep.speed - decel, 0, speed)
 		
-	sheep.motion = direction * sheep.speed
+	sheep.motion = direction * sheep.orientation * sheep.speed
 	
 	if not sheep.motion:
 		sheep.change_state("Idle")

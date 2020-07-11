@@ -30,7 +30,7 @@ func update(host: Node, delta: float) -> void:
 	else:
 		sheep.speed = clamp(sheep.speed - decel, 0, speed)
 	
-	sheep.motion = direction * sheep.speed
+	sheep.motion = direction * sheep.orientation * sheep.speed
 
 	if sheep.is_predator_nearby():
 		sheep.change_state("Flee")

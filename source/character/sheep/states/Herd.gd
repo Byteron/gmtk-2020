@@ -12,10 +12,12 @@ func enter(host: Node) -> void:
 func update(host: Node, delta: float) -> void:
 	var sheep := host as Sheep	
 	
-	var direction: = sheep.get_herd_direction()
+	var direction := sheep.get_herd_direction()
 	
-	sheep.motion = direction * speed
-
+	sheep.motion = direction * sheep.orientation * speed
+	
+	print(sheep.motion)
+	
 	if sheep.is_predator_nearby():
 		sheep.change_state("Flee")
 	elif sheep.is_in_herd():

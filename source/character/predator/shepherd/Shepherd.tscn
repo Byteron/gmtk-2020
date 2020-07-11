@@ -1,12 +1,19 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://source/character/predator/Predator.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/character/predator/shepherd/states/Idle.gd" type="Script" id=2]
 [ext_resource path="res://source/character/predator/shepherd/Shepherd.gd" type="Script" id=3]
 [ext_resource path="res://source/character/predator/shepherd/states/Walk.gd" type="Script" id=4]
 
+[sub_resource type="CircleShape2D" id=1]
+radius = 35.9076
+
 [node name="Shepherd" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
+menace = 350
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 1 )
 
 [node name="Idle" type="Node" parent="FSM" index="0"]
 script = ExtResource( 2 )

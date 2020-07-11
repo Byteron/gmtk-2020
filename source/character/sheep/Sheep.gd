@@ -18,6 +18,7 @@ func get_herd_center() -> Vector2:
 func get_herd_direction() -> Vector2:
 	if not herd:
 		return Vector2()
+		
 	return global_position.direction_to(herd.center)
 
 

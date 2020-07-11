@@ -10,7 +10,7 @@ func enter(host: Node) -> void:
 func update(host: Node, delta: float) -> void:
 	var shepherd := host as Shepherd
 	
-	shepherd.motion = shepherd.get_input_direction() * speed
+	shepherd.motion = shepherd.get_input_direction() * shepherd.orientation * speed
 
 	if not shepherd.motion:
 		shepherd.change_state("Idle")
