@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=16 format=2]
-=======
 [gd_scene load_steps=17 format=2]
->>>>>>> a82496373019b4d11c37d11d8f81efe884a290da
 
 [ext_resource path="res://addons/audio_booth/source/sfx/SoundBooth.gd" type="Script" id=1]
 [ext_resource path="res://audio/sfx/playerGrassFS/Player_FS_Grass-002.wav" type="AudioStream" id=2]
@@ -19,10 +15,7 @@
 [ext_resource path="res://audio/sfx/animalGrassFS/Animal_FS_Grass-005.wav" type="AudioStream" id=13]
 [ext_resource path="res://audio/sfx/animalGrassFS/Animal_FS_Grass-006.wav" type="AudioStream" id=14]
 [ext_resource path="res://audio/sfx/animalGrassFS/Animal_FS_Grass-009.wav" type="AudioStream" id=15]
-<<<<<<< HEAD
-=======
 [ext_resource path="res://audio/sfx/Ambient_Wind.wav" type="AudioStream" id=16]
->>>>>>> a82496373019b4d11c37d11d8f81efe884a290da
 
 [node name="SFX" type="Node"]
 script = ExtResource( 1 )
@@ -40,10 +33,7 @@ streams = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ) ]
 script = ExtResource( 3 )
 stream = ExtResource( 11 )
 streams = [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 15 ) ]
-<<<<<<< HEAD
-=======
 
 [node name="Wind" type="Node" parent="."]
 script = ExtResource( 3 )
 stream = ExtResource( 16 )
->>>>>>> a82496373019b4d11c37d11d8f81efe884a290da

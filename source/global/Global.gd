@@ -10,13 +10,10 @@ func _ready() -> void:
 	Scene.register_scene("Level2", "res://source/level/levels/Level2.tscn")
 	
 	load_game()
-<<<<<<< HEAD
-=======
-	
+
 	SFX.play_sfx("Wind")
->>>>>>> a82496373019b4d11c37d11d8f81efe884a290da
 
-
+	
 func load_game() -> void:
 	var save_game = load("user://save_game.tres")
 	
