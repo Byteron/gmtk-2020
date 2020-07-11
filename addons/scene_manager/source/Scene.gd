@@ -10,8 +10,10 @@ onready var scene_loader := $SceneLoader as SceneLoader
 onready var anim := $AnimationPlayer as AnimationPlayer
 onready var progress_bar := $TextureProgress as TextureProgress
 
+
 func register_scene(scene_name: String, path_to_scene: String) -> void:
 	scenes[scene_name] = path_to_scene
+
 
 func change(scene_name: String, fade := false, show_bar := false) -> void:
 
@@ -34,10 +36,16 @@ func change(scene_name: String, fade := false, show_bar := false) -> void:
 	else:
 		_on_AnimationPlayer_animation_finished("fade_out")
 
+
+func has_scene(scene_name) -> bool:
+	return scenes.has(scene_name)
+
+
 func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 	if anim_name == "fade_out":
 		scene_loader.load_interactive(next_scene)
 		progress_bar.max_value = scene_loader.get_stage_count()
+
 
 func _on_ProgressBar_value_changed(value: float) -> void:
 	if progress_bar.max_value == value:
@@ -45,11 +53,13 @@ func _on_ProgressBar_value_changed(value: float) -> void:
 	elif not progress_bar.visible and show_bar:
 		progress_bar.visible = true
 
+
 func _on_SceneLoader_scene_loaded(scene) -> void:
 	get_tree().change_scene_to(scene)
 	if fade:
 		anim.play("fade_in")
 	next_scene = ""
+
 
 func _on_SceneLoader_stage_changed(stage) -> void:
 	progress_bar.value = stage
