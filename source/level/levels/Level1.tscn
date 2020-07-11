@@ -1,14 +1,20 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://source/level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/character/sheep/Sheep.tscn" type="PackedScene" id=2]
 [ext_resource path="res://source/objects/Herd.tscn" type="PackedScene" id=3]
+[ext_resource path="res://source/safe_place/SafePlace.tscn" type="PackedScene" id=4]
 
 [node name="Level1" instance=ExtResource( 1 )]
 level_number = 1
 
-[node name="Shepherd" parent="." index="0"]
+[node name="Shepherd" parent="." index="1"]
 position = Vector2( -102.272, 316.329 )
+
+[node name="SafePlace" parent="SafePlaces" index="0" instance=ExtResource( 4 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SafePlaces/SafePlace" index="0"]
+polygon = PoolVector2Array( 68.4883, -626.933, 210.644, -1014.6, 723.647, -876.398, 761.445, -574.017, 413.707, -425.346 )
 
 [node name="Herd" parent="Herds" index="0" instance=ExtResource( 3 )]
 

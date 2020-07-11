@@ -23,6 +23,6 @@ func _process(delta: float) -> void:
 	update()
 
 func _draw() -> void:
-	print("draw")
+	# print("draw")
 	draw_circle(center, 30, Color("AA00FF00"))
 	draw_circle(center, radius, Color("5500FF00"))
