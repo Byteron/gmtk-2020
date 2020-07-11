@@ -10,6 +10,8 @@ func _ready() -> void:
 	Scene.register_scene("Level2", "res://source/level/levels/Level2.tscn")
 	
 	load_game()
+	
+	SFX.play_sfx("Wind")
 
 
 func load_game() -> void:

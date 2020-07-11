@@ -8,12 +8,21 @@ func _ready() -> void:
 	for child in _get_children_recursive(self, []):
 		sfx[child.name] = child
 
+
 func play_sfx(sfx_name: String) -> void:
 
 	if not sfx.has(sfx_name):
 		print("Could not find sfx: %s" % sfx_name)
 
 	sfx[sfx_name].play()
+
+
+func stop_sfx(sfx_name) -> void:
+	if not sfx.has(sfx_name):
+		print("Could not find sfx: %s" % sfx_name)
+
+	sfx[sfx_name].stop()
+
 
 func _get_children_recursive(node: Node, children: Array) -> Array:
 	for child in node.get_children():

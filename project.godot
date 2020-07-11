@@ -122,9 +122,9 @@ run/main_scene="res://source/menu/TitleScreen.tscn"
 [autoload]
 
 Scene="*res://addons/scene_manager/source/Scene.tscn"
-Global="*res://source/global/Global.gd"
 Music="*res://source/global/Music.tscn"
 SFX="*res://source/global/SFX.tscn"
+Global="*res://source/global/Global.gd"
 
 [display]
 
