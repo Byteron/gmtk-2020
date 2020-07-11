@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Animal_FS_Grass-001.wav-e94ef400f1a82d937f26d94a7a0c4c76.sample"
+
+[deps]
+
+source_file="res://audio/sfx/animalGrassFS/Animal_FS_Grass-001.wav"
+dest_files=[ "res://.import/Animal_FS_Grass-001.wav-e94ef400f1a82d937f26d94a7a0c4c76.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
