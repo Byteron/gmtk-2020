@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://source/objects/HFence.tscn" type="PackedScene" id=4]
+
+[node name="HFence4Group" type="YSort"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HFence" parent="." instance=ExtResource( 4 )]
+
+[node name="HFence2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 238, 0 )
+
+[node name="HFence3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 476, 0 )
+
+[node name="HFence4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 714, 0 )

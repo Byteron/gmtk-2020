@@ -18,12 +18,12 @@ func update(host: Node, delta: float) -> void:
 		
 		var predator : Node2D = node
 		
-		if not direction:
-			direction = predator.global_position.direction_to(sheep.global_position)
-		else:
-			direction.linear_interpolate(predator.global_position.direction_to(sheep.global_position), 0.5) 
-			
 		if predator.global_position.distance_to(sheep.global_position) < predator.menace:
+			if not direction:
+				direction = predator.global_position.direction_to(sheep.global_position)
+			else:
+				direction = direction.linear_interpolate(predator.global_position.direction_to(sheep.global_position), 0.5) 
+			
 			walk = true
 	
 	if walk:

@@ -1,17 +1,16 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://source/level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/character/sheep/Sheep.tscn" type="PackedScene" id=2]
 [ext_resource path="res://source/objects/Herd.tscn" type="PackedScene" id=3]
 [ext_resource path="res://source/safe_place/SafePlace.tscn" type="PackedScene" id=4]
-[ext_resource path="res://source/objects/Rock2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://source/objects/Rock1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://source/character/predator/wolf/Wolf.tscn" type="PackedScene" id=7]
 [ext_resource path="res://source/game/PredatorPath.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -100.131, -201.801, 100, 66, -100, -66, -292.131, -327.801, 150, -70, -150, 70, -558.131, -411.801, 8, -50, -8, 50, -742.131, -257.801, -20, -24, 20, 24, -606.131, -53.8013, -66, -42, 66, 42, -416.131, 156.199, -52, 46, 52, -46, -94.1307, 116.199, 0, 0, 0, 0, -82.1307, -79.8013 )
+"points": PoolVector2Array( 0, 0, 0, 0, 330, -10, 0, 0, 0, 0, 770, 258, 0, 0, 0, 0, 858, 686, 0, 0, 0, 0, 894, 1210, 0, 0, 0, 0, 914, 1842, 0, 0, 0, 0, 782, 1978, 0, 0, 0, 0, 874, 1814, 0, 0, 0, 0, 862, 1234, 0, 0, 0, 0, 818, 714, 0, 0, 0, 0, 738, 286 )
 }
 
 [node name="Level1" instance=ExtResource( 1 )]
@@ -23,120 +22,43 @@ level_number = 1
 position = Vector2( -553.159, -715.142 )
 polygon = PoolVector2Array( 221.493, -530.499, -196.764, -905.628, 257.32, -1154.53, 1039.35, -845.084, 654.47, -614.244, 620.615, -550.099 )
 
+[node name="Fences1" parent="Sorted" index="0"]
+tile_data = PoolIntArray( -720901, 1, 0, -720900, 2, 0, -720899, 2, 0, -720898, 2, 0, -720897, 2, 0, -786432, 2, 0, -786431, 2, 0, -786430, 2, 0, -786429, 2, 0, -786428, 0, 0, -655365, 3, 0, -720891, 3, 0, -589829, 3, 0, -655355, 3, 0, -524293, 3, 0, -589819, 3, 0, -458757, 3, 0, -524283, 3, 0, -393221, 3, 0, -458748, 1, 0, -327685, 3, 0, -393212, 3, 0, -262149, 2, 0, -262148, 2, 0, -262147, 2, 0, -262146, 2, 0, -262145, 3, 0, -327676, 0, 0, -196609, 3, 0, -262139, 0, 0, -131073, 3, 0, -196602, 3, 0, -65537, 3, 0, -131066, 3, 0, -1, 3, 0, -65530, 3, 0, 65535, 3, 0, 6, 3, 0, 131067, 3, 0, 131069, 2, 0, 131070, 2, 0, 65542, 3, 0, 196603, 3, 0, 131078, 3, 0, 262139, 3, 0, 196614, 3, 0, 327675, 3, 0, 262150, 3, 0, 393211, 3, 0, 327686, 3, 0, 458747, 0, 0, 393222, 3, 0, 524284, 0, 0, 458757, 1, 0, 589821, 0, 0, 524292, 1, 0, 655358, 2, 0, 655359, 2, 0, 589824, 2, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0 )
+
 [node name="Rock1" parent="Sorted/Obstacles" index="0" instance=ExtResource( 6 )]
-position = Vector2( -713.08, -380.085 )
-
-[node name="Rock2" parent="Sorted/Obstacles" index="1" instance=ExtResource( 5 )]
-position = Vector2( 427.175, -50.4537 )
-
-[node name="Rock3" parent="Sorted/Obstacles" index="2" instance=ExtResource( 5 )]
-position = Vector2( 760.17, -289.268 )
-
-[node name="Rock4" parent="Sorted/Obstacles" index="3" instance=ExtResource( 5 )]
-position = Vector2( 812.899, -614.372 )
-
-[node name="Rock5" parent="Sorted/Obstacles" index="4" instance=ExtResource( 5 )]
-position = Vector2( 677.214, -909.226 )
-
-[node name="Rock6" parent="Sorted/Obstacles" index="5" instance=ExtResource( 5 )]
-position = Vector2( -450.721, -198.451 )
-
-[node name="Rock7" parent="Sorted/Obstacles" index="6" instance=ExtResource( 5 )]
-position = Vector2( -964.101, -713.05 )
-
-[node name="Rock8" parent="Sorted/Obstacles" index="7" instance=ExtResource( 5 )]
-position = Vector2( -894.714, 750.08 )
-
-[node name="Rock9" parent="Sorted/Obstacles" index="8" instance=ExtResource( 5 )]
-position = Vector2( -544.901, 1002.35 )
-
-[node name="Rock10" parent="Sorted/Obstacles" index="9" instance=ExtResource( 5 )]
-position = Vector2( -18.9431, 1143.62 )
-
-[node name="Rock11" parent="Sorted/Obstacles" index="10" instance=ExtResource( 5 )]
-position = Vector2( 470.382, 984.921 )
-
-[node name="Rock12" parent="Sorted/Obstacles" index="11" instance=ExtResource( 5 )]
-position = Vector2( 861.175, 806.12 )
-
-[node name="Rock13" parent="Sorted/Obstacles" index="12" instance=ExtResource( 5 )]
-position = Vector2( 1068.5, 596.474 )
-
-[node name="Rock14" parent="Sorted/Obstacles" index="13" instance=ExtResource( 5 )]
-position = Vector2( 954.054, 321.779 )
-
-[node name="Rock15" parent="Sorted/Obstacles" index="14" instance=ExtResource( 5 )]
-position = Vector2( 799.496, 58.2467 )
-
-[node name="Rock16" parent="Sorted/Obstacles" index="15" instance=ExtResource( 5 )]
-position = Vector2( -1088.92, 462.933 )
-
-[node name="Rock17" parent="Sorted/Obstacles" index="16" instance=ExtResource( 5 )]
-position = Vector2( -1174.59, 193.31 )
-
-[node name="Rock18" parent="Sorted/Obstacles" index="17" instance=ExtResource( 5 )]
-position = Vector2( -884.813, -56.1547 )
-
-[node name="Rock19" parent="Sorted/Obstacles" index="18" instance=ExtResource( 5 )]
-position = Vector2( -1115.55, -1048.03 )
-
-[node name="Rock20" parent="Sorted/Obstacles" index="19" instance=ExtResource( 5 )]
-position = Vector2( -995.688, -1335.71 )
-
-[node name="Rock21" parent="Sorted/Obstacles" index="20" instance=ExtResource( 5 )]
-position = Vector2( -836.867, -1575.44 )
-
-[node name="Rock22" parent="Sorted/Obstacles" index="21" instance=ExtResource( 5 )]
-position = Vector2( -444.311, -1731.26 )
-
-[node name="Rock23" parent="Sorted/Obstacles" index="22" instance=ExtResource( 5 )]
-position = Vector2( 41.1407, -1695.3 )
-
-[node name="Rock24" parent="Sorted/Obstacles" index="23" instance=ExtResource( 5 )]
-position = Vector2( 418.714, -1569.45 )
-
-[node name="Rock25" parent="Sorted/Obstacles" index="24" instance=ExtResource( 5 )]
-position = Vector2( 607.501, -1308.74 )
-
-[node name="Rock26" parent="Sorted/Obstacles" index="25" instance=ExtResource( 5 )]
-position = Vector2( 362.496, -1039.59 )
-
-[node name="Rock27" parent="Sorted/Obstacles" index="26" instance=ExtResource( 5 )]
-position = Vector2( -668.769, -1127.78 )
-
-[node name="Rock28" parent="Sorted/Obstacles" index="27" instance=ExtResource( 5 )]
-position = Vector2( -864.116, -928.149 )
+position = Vector2( -920, 42 )
 
 [node name="Herd" parent="Sorted/Herds" index="0" instance=ExtResource( 3 )]
 
 [node name="Sheep5" parent="Sorted/Herds/Herd" index="0" instance=ExtResource( 2 )]
-position = Vector2( 387.495, 164.049 )
+position = Vector2( 544.216, 654.397 )
 
 [node name="Sheep6" parent="Sorted/Herds/Herd" index="1" instance=ExtResource( 2 )]
-position = Vector2( 302.642, 373.352 )
+position = Vector2( 459.363, 863.7 )
 
 [node name="Sheep7" parent="Sorted/Herds/Herd" index="2" instance=ExtResource( 2 )]
-position = Vector2( 486.49, 480.833 )
+position = Vector2( 643.211, 971.181 )
 
 [node name="Sheep2" parent="Sorted/Herds/Herd" index="3" instance=ExtResource( 2 )]
-position = Vector2( 127.279, 104.652 )
+position = Vector2( 284, 595 )
 
 [node name="Herd2" parent="Sorted/Herds" index="1" instance=ExtResource( 3 )]
 
 [node name="Sheep" parent="Sorted/Herds/Herd2" index="0" instance=ExtResource( 2 )]
-position = Vector2( -370.524, 209.304 )
+position = Vector2( -572.567, 736.861 )
 
 [node name="Sheep3" parent="Sorted/Herds/Herd2" index="1" instance=ExtResource( 2 )]
-position = Vector2( -627.911, 130.108 )
+position = Vector2( -829.954, 657.665 )
 
 [node name="Sheep4" parent="Sorted/Herds/Herd2" index="2" instance=ExtResource( 2 )]
-position = Vector2( -582.656, 308.299 )
+position = Vector2( -784.699, 835.856 )
 
 [node name="Wolf" parent="Sorted/Predators" index="0" instance=ExtResource( 7 )]
 position = Vector2( 358, -540 )
+menace = 500
 
 [node name="PredatorPath" parent="Sorted/Predators/Wolf" index="4" instance=ExtResource( 8 )]
 curve = SubResource( 1 )
 
-[node name="Shepherd" parent="Sorted" index="4"]
+[node name="Shepherd" parent="Sorted" index="6"]
 position = Vector2( 6.72729, 605.445 )
