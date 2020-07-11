@@ -19,8 +19,12 @@ func next_level() -> void:
 	var next_level =  LEVEL % (level_number + 1)
 	
 	if Scene.has_scene(next_level):
+		Global.current_level = level_number + 1
+		Global.save_game()
 		Scene.change(next_level, true)
 	else:
+		Global.current_level = 1
+		Global.save_game()
 		Scene.change("TitleScreen", true)
 
 
