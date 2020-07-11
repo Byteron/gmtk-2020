@@ -29,6 +29,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://source/interactable/Interactable.gd"
 }, {
+"base": "YSort",
+"class": "Level",
+"language": "GDScript",
+"path": "res://source/level/Level.gd"
+}, {
 "base": "Node",
 "class": "MusicBooth",
 "language": "GDScript",
@@ -89,6 +94,7 @@ _global_script_class_icons={
 "FiniteStateMachine": "",
 "Herd": "",
 "Interactable": "",
+"Level": "",
 "MusicBooth": "",
 "Predator": "",
 "SceneLoader": "",
@@ -113,6 +119,11 @@ Scene="*res://addons/scene_manager/source/Scene.tscn"
 Global="*res://source/global/Global.gd"
 Music="*res://source/global/Music.tscn"
 SFX="*res://source/global/SFX.tscn"
+
+[display]
+
+window/size/width=1280
+window/size/height=800
 
 [editor_plugins]
 
