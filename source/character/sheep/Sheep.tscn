@@ -33,19 +33,19 @@ script = ExtResource( 4 )
 
 [node name="Walk" type="Node" parent="FSM" index="1"]
 script = ExtResource( 6 )
-speed = 200
+speed = 250
 accel = 5
 decel = 30
 
 [node name="Flee" type="Node" parent="FSM" index="2"]
 script = ExtResource( 5 )
-speed = 350
+speed = 380
 accel = 10
 decel = 30
 
 [node name="Herd" type="Node" parent="FSM" index="3"]
 script = ExtResource( 3 )
-speed = 150
+speed = 280
 accel = 5
 decel = 30
 

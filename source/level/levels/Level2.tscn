@@ -20,44 +20,28 @@ polygon = PoolVector2Array( -1211.65, -258.265, -1299.65, -869.518, -790.669, -9
 [node name="Lake" parent="Environment" index="0" instance=ExtResource( 5 )]
 position = Vector2( 1098.67, 453.06 )
 
-[node name="Shepherd" parent="." index="3"]
-position = Vector2( -102.272, 316.329 )
+[node name="Herd" parent="Sorted/Herds" index="0" instance=ExtResource( 2 )]
 
-[node name="Herd" parent="Herds" index="0" instance=ExtResource( 2 )]
+[node name="Sheep" parent="Sorted/Herds/Herd" index="0" instance=ExtResource( 1 )]
+position = Vector2( -45.3059, -196.326 )
 
-[node name="Sheep" parent="Herds/Herd" index="0" instance=ExtResource( 1 )]
+[node name="Sheep2" parent="Sorted/Herds/Herd" index="1" instance=ExtResource( 1 )]
+position = Vector2( 105.714, -177.448 )
 
-[node name="Sheep2" parent="Herds/Herd" index="1" instance=ExtResource( 1 )]
-position = Vector2( 123.678, -61.8387 )
+[node name="Sheep3" parent="Sorted/Herds/Herd" index="2" instance=ExtResource( 1 )]
+position = Vector2( 177.448, 0 )
 
-[node name="Sheep3" parent="Herds/Herd" index="2" instance=ExtResource( 1 )]
-position = Vector2( 145.083, 92.7582 )
+[node name="Sheep4" parent="Sorted/Herds/Herd" index="3" instance=ExtResource( 1 )]
+position = Vector2( 302.04, -113.265 )
 
-[node name="Sheep4" parent="Herds/Herd" index="3" instance=ExtResource( 1 )]
-position = Vector2( 252.112, -2.37842 )
+[node name="Sheep5" parent="Sorted/Herds/Herd" index="4" instance=ExtResource( 1 )]
+position = Vector2( 339.795, 86.8363 )
 
-[node name="Sheep5" parent="Herds/Herd" index="4" instance=ExtResource( 1 )]
-position = Vector2( 230.706, -192.652 )
+[node name="Sheep6" parent="Sorted/Herds/Herd" index="5" instance=ExtResource( 1 )]
+position = Vector2( 143.469, 203.877 )
 
-[node name="Sheep6" parent="Herds/Herd" index="5" instance=ExtResource( 1 )]
-position = Vector2( 404.331, -111.786 )
+[node name="Sheep7" parent="Sorted/Herds/Herd" index="6" instance=ExtResource( 1 )]
+position = Vector2( -52.8567, 203.877 )
 
-[node name="Herd2" parent="Herds" index="1" instance=ExtResource( 2 )]
-
-[node name="Sheep" parent="Herds/Herd2" index="0" instance=ExtResource( 1 )]
-position = Vector2( 104.65, 292.545 )
-
-[node name="Sheep2" parent="Herds/Herd2" index="1" instance=ExtResource( 1 )]
-position = Vector2( 228.328, 230.706 )
-
-[node name="Sheep3" parent="Herds/Herd2" index="2" instance=ExtResource( 1 )]
-position = Vector2( 249.734, 385.303 )
-
-[node name="Sheep4" parent="Herds/Herd2" index="3" instance=ExtResource( 1 )]
-position = Vector2( 356.762, 290.167 )
-
-[node name="Sheep5" parent="Herds/Herd2" index="4" instance=ExtResource( 1 )]
-position = Vector2( 335.357, 99.8934 )
-
-[node name="Sheep6" parent="Herds/Herd2" index="5" instance=ExtResource( 1 )]
-position = Vector2( 508.981, 180.76 )
+[node name="Sheep8" parent="Sorted/Herds/Herd" index="7" instance=ExtResource( 1 )]
+position = Vector2( -177.448, -15.1021 )

@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://source/character/predator/Predator.tscn" type="PackedScene" id=1]
+[ext_resource path="res://source/character/predator/wolf/states/Patrol.gd" type="Script" id=2]
+[ext_resource path="res://source/character/predator/wolf/Wolf.gd" type="Script" id=3]
+
+[node name="Wolf" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Patrol" type="Node" parent="FSM" index="0"]
+script = ExtResource( 2 )

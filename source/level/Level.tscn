@@ -13,16 +13,20 @@ autostart = true
 
 [node name="Environment" type="Node2D" parent="."]
 
-[node name="Shepherd" parent="." instance=ExtResource( 1 )]
+[node name="Sorted" type="YSort" parent="."]
+
+[node name="Hazards" type="YSort" parent="Sorted"]
+
+[node name="Obstacles" type="YSort" parent="Sorted"]
+
+[node name="Herds" type="YSort" parent="Sorted"]
+
+[node name="Predators" type="YSort" parent="Sorted"]
+
+[node name="Shepherd" parent="Sorted" instance=ExtResource( 1 )]
 menace = 450
 
-[node name="Camera2D" type="Camera2D" parent="Shepherd"]
+[node name="Camera2D" type="Camera2D" parent="Sorted/Shepherd"]
 current = true
 zoom = Vector2( 1.75, 1.75 )
-
-[node name="Hazards" type="YSort" parent="."]
-
-[node name="Obstacles" type="YSort" parent="."]
-
-[node name="Herds" type="YSort" parent="."]
 [connection signal="timeout" from="WinConditionCheckTimer" to="." method="_on_WinConditionCheckTimer_timeout"]
