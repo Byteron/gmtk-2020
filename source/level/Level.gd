@@ -31,11 +31,17 @@ func _on_WinConditionCheckTimer_timeout() -> void:
 	
 	for place in get_tree().get_nodes_in_group("SafePlace"):
 		safe_sheeps += place.get_sheeps().size()
-	
+		
 	var sheeps = get_tree().get_nodes_in_group("Sheep")
 	
-	if sheeps.size() == 0:
+	var dead := 0
+	
+	for sheep in sheeps:
+		if sheep.is_dead:
+			dead += 1
+	
+	if sheeps.size() - dead == 0:
 		game_over()
 	
-	elif safe_sheeps == sheeps.size():
+	elif safe_sheeps == sheeps.size() - dead:
 		victory()
