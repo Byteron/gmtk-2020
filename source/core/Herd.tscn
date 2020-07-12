@@ -5,4 +5,5 @@
 [node name="Herd" type="YSort" groups=[
 "Herd",
 ]]
+sort_enabled = false
 script = ExtResource( 3 )

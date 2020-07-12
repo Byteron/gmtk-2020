@@ -10,6 +10,7 @@ func _ready() -> void:
 	for child in get_children():
 		child.herd = self
 
+
 func _process(delta: float) -> void:
 	center = Vector2()
 	
@@ -22,7 +23,8 @@ func _process(delta: float) -> void:
 	
 	update()
 
+
 func _draw() -> void:
-	# print("draw")
+	## print("draw")
 	draw_circle(center, 30, Color("AA00FF00"))
 	draw_circle(center, radius, Color("5500FF00"))
