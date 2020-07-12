@@ -3,9 +3,11 @@ class_name Victory
 
 
 onready var ratings := $Rating
+onready var level_label := $LevelLabel
 
 
 func _ready() -> void:
+	level_label.text = "LEVEL %d" % Global.current_level
 	Global.increase_level()
 	ratings.rate(Global.sheeps, Global.max_sheeps)
 	# ratings.rate(10, 10)
