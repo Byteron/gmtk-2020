@@ -3,8 +3,9 @@
 [ext_resource path="res://source/character/sheep/Sheep.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/objects/Herd.tscn" type="PackedScene" id=2]
 [ext_resource path="res://source/level/Level.tscn" type="PackedScene" id=3]
-[ext_resource path="res://source/safe_place/SafePlace.tscn" type="PackedScene" id=4]
+[ext_resource path="res://source/core/SafePlace.tscn" type="PackedScene" id=4]
 [ext_resource path="res://source/interactable/water/Lake.tscn" type="PackedScene" id=5]
+
 
 [node name="Level2" instance=ExtResource( 3 )]
 level_number = 2

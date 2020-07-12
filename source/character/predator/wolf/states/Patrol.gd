@@ -7,25 +7,26 @@ var path := []
 var target := Vector2(0, 0)
 
 func enter(host: Node) -> void:
-	var wolf := host as Wolf
+	var predator := host as Predator
+	predator.anim.play("walk")
 
 
 func update(host: Node, delta: float) -> void:
-	var wolf := host as Wolf
+	var predator := host as Predator
 	
 	if not path:
-		path = wolf.path.path.duplicate()
+		path = predator.path.path.duplicate()
 	
-	if not target or wolf.global_position.distance_to(target) < 5:
+	if not target or predator.global_position.distance_to(target) < 5:
 		target = path.pop_front()
-		print("Target: ", target, " Position: ", wolf.global_position)
+		print("Target: ", target, " Position: ", predator.global_position)
 
-	var direction = wolf.global_position.direction_to(target)
+	var direction = predator.global_position.direction_to(target)
 	
-	wolf.motion = direction * speed
-	wolf.move()
+	predator.motion = direction * speed
+	predator.move()
 
 
 func exit(host: Node) -> void:
-	var wolf := host as Wolf
+	var predator := host as Wolf
 

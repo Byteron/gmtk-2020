@@ -18,5 +18,5 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	draw_circle(Vector2(), menace, Color("66FF0000"))
+	# draw_circle(Vector2(), menace, Color("66FF0000"))
 	pass

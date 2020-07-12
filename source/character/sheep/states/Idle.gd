@@ -1,7 +1,8 @@
 extends State
 
 func enter(host: Node) -> void:
-	pass
+	host.anim.play("idle")
+
 
 func update(host: Node, delta: float) -> void:
 	var sheep := host as Sheep

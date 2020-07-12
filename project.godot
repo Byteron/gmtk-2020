@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "YSort",
 "class": "Herd",
 "language": "GDScript",
-"path": "res://source/game/Herd.gd"
+"path": "res://source/core/Herd.gd"
 }, {
 "base": "Area2D",
 "class": "Interactable",
@@ -47,7 +47,7 @@ _global_script_classes=[ {
 "base": "Path2D",
 "class": "PredatorPath",
 "language": "GDScript",
-"path": "res://source/game/PredatorPath.gd"
+"path": "res://source/core/PredatorPath.gd"
 }, {
 "base": "Resource",
 "class": "SaveGame",
