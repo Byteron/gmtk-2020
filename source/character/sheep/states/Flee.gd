@@ -7,7 +7,7 @@ export var decel := 0
 func enter(host: Node) -> void:
 	var sheep := host as Sheep
 	sheep.anim.play("walk")
-	
+	sheep.sweat()
 
 func update(host: Node, delta: float) -> void:
 	var sheep := host as Sheep

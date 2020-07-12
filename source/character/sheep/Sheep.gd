@@ -3,6 +3,9 @@ class_name Sheep
 
 onready var safe_zone := $SafeZone
 
+onready var sweat_particles := $SweatParticles
+
+
 var herd : Herd = null
 
 func _ready() -> void:
@@ -11,6 +14,10 @@ func _ready() -> void:
 
 func step() -> void:
 	SFX.play_sfx("AnimalFootstep")
+
+
+func sweat() -> void:
+	sweat_particles.emitting = true
 
 
 func get_herd_center() -> Vector2:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://source/character/Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/character/sheep/Sheep.gd" type="Script" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://graphics/images/sheep_3.png" type="Texture" id=9]
 [ext_resource path="res://graphics/images/sheep_2.png" type="Texture" id=10]
 [ext_resource path="res://graphics/images/sheep_4.png" type="Texture" id=11]
+[ext_resource path="res://graphics/images/sheep_tear.png" type="Texture" id=12]
+[ext_resource path="res://addons/finite_state_machine/source/State.gd" type="Script" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle"
@@ -110,6 +112,10 @@ tracks/3/keys = {
 [sub_resource type="CircleShape2D" id=3]
 radius = 30.0
 
+[sub_resource type="Gradient" id=5]
+offsets = PoolRealArray( 0, 0.43128, 0.853081 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
 [sub_resource type="CircleShape2D" id=4]
 radius = 57.9511
 
@@ -133,6 +139,27 @@ offset = Vector2( 0, -150 )
 position = Vector2( -1.32434, -29.4001 )
 shape = SubResource( 3 )
 
+[node name="SweatParticles" type="CPUParticles2D" parent="." index="3"]
+position = Vector2( 40.8289, -89.8984 )
+rotation = -2.3206
+emitting = false
+amount = 6
+lifetime = 0.6
+one_shot = true
+explosiveness = 0.8
+lifetime_randomness = 0.4
+local_coords = false
+texture = ExtResource( 12 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_align_y = true
+spread = 60.0
+gravity = Vector2( 0, 500 )
+initial_velocity = 280.0
+initial_velocity_random = 0.5
+scale_amount = 0.4
+color_ramp = SubResource( 5 )
+
 [node name="Idle" type="Node" parent="FSM" index="0"]
 script = ExtResource( 4 )
 
@@ -154,7 +181,13 @@ speed = 200
 accel = 10
 decel = 30
 
-[node name="SafeZone" type="Area2D" parent="." index="4"]
+[node name="Drown" type="Node" parent="FSM" index="4"]
+script = ExtResource( 13 )
+
+[node name="Die" type="Node" parent="FSM" index="5"]
+script = ExtResource( 13 )
+
+[node name="SafeZone" type="Area2D" parent="." index="5"]
 position = Vector2( -1.32434, -29.4001 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SafeZone" index="0"]
