@@ -2,6 +2,7 @@ extends YSort
 class_name Herd
 
 export var radius := 300
+export var max_radius := 600
 
 var center := Vector2()
 
@@ -31,6 +32,7 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	# draw_circle(center, 30, Color("AA00FF00"))
-	# draw_circle(center, radius, Color("5500FF00"))
+	draw_circle(center, 30, Color("AA00FF00"))
+	draw_circle(center, radius, Color("5500FF00"))
+	draw_circle(center, max_radius, Color("5500FF00"))
 	pass
