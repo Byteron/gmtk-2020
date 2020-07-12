@@ -6,6 +6,7 @@ onready var safe_zone := $SafeZone
 onready var sweat_particles := $SweatParticles
 onready var blood_particles := $BloodParticles
 
+onready var coll := $CollisionShape2D as CollisionShape2D
 
 var herd : Herd = null
 
@@ -31,11 +32,13 @@ func bleed() -> void:
 
 func drown() -> void:
 	is_dead = true
+	coll.disabled = true
 	change_state("Drown")
 
 
 func kill() -> void:
 	is_dead = true
+	coll.disabled = true
 	change_state("Die")
 
 
