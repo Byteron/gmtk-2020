@@ -7,4 +7,5 @@ func step() -> void:
 
 
 func _ready() -> void:
-	change_state("Patrol")
+	if path:
+		change_state("Patrol")
