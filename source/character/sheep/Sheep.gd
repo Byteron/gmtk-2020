@@ -55,7 +55,10 @@ func get_herd_center() -> Vector2:
 func get_herd_direction() -> Vector2:
 	if not herd:
 		return Vector2()
-		
+	
+	if global_position.distance_to(herd.center) > herd.max_radius:
+		return Vector2()
+	
 	return global_position.direction_to(herd.center)
 
 
@@ -87,6 +90,10 @@ func is_predator_nearby() -> bool:
 
 func is_obstacle_nearby() -> bool:
 	return get_obstacles().size() > 0
+
+
+func is_to_far_from_herd() -> bool:
+	return global_position.distance_to(get_herd_center()) > herd.max_radius
 
 
 func is_in_herd() -> bool:
