@@ -35,7 +35,7 @@ func get_random_sheep_in_range() -> Node2D:
 		return null
 	
 	for sheep in sheeps:
-		if sheep.global_position.distance_to(global_position) < menace:
+		if sheep.global_position.distance_to(global_position) < menace and not sheep.is_dead:
 			sheeps_in_range.append(sheep)
 	
 	sheeps_in_range.shuffle()
