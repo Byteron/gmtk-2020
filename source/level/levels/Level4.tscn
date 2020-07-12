@@ -61,3 +61,6 @@ position = Vector2( 552, -752 )
 
 [node name="PredatorPath" parent="Sorted/Predators/Rabbit" index="4" instance=ExtResource( 8 )]
 curve = SubResource( 1 )
+
+[node name="Shepherd" parent="Sorted" index="7"]
+position = Vector2( 0, 0 )

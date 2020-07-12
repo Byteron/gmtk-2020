@@ -1,5 +1,114 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://source/level/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://source/interactable/water/Lake.tscn" type="PackedScene" id=2]
+[ext_resource path="res://source/core/Herd.tscn" type="PackedScene" id=3]
+[ext_resource path="res://source/character/sheep/Sheep.tscn" type="PackedScene" id=4]
+[ext_resource path="res://source/core/PredatorPath.tscn" type="PackedScene" id=5]
+[ext_resource path="res://source/character/predator/rabbit/Rabbit.tscn" type="PackedScene" id=6]
+[ext_resource path="res://source/character/predator/wolf/Wolf.tscn" type="PackedScene" id=7]
+[ext_resource path="res://source/objects/Rock2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://source/objects/Rock1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://source/objects/RedSafePost.tscn" type="PackedScene" id=10]
+[ext_resource path="res://source/core/SafePlace.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 128, 0, 0, 0, 0, 280, 384, 0, 0, 0, 0, 512, 376, 0, 0, 0, 0, 784, 112, 0, 0, 0, 0, 776, 16, 0, 0, 0, 0, 544, -168, 0, 0, 0, 0, 256, -168, 0, 0, 0, 0, 0, 64 )
+}
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 144, 32, 0, 0, 0, 0, 1168, 104, 0, 0, 0, 0, 1760, 64, 0, 0, 0, 0, 2064, -168, 0, 0, 0, 0, 2592, -168, 0, 0, 0, 0, 2816, 24, 0, 0, 0, 0, 3144, 272, 0, 0, 0, 0, 3384, 384, 0, 0, 0, 0, 3896, 368, 0, 0, 0, 0, 4104, 312, 0, 0, 0, 0, 4200, 120, 0, 0, 0, 0, 4272, -104 )
+}
+
+[sub_resource type="Curve2D" id=3]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 160, -48, 0, 0, 0, 0, 1312, 8, 0, 0, 0, 0, 1936, -48, 0, 0, 0, 0, 2240, -296, 0, 0, 0, 0, 2752, -296, 0, 0, 0, 0, 3296, 152, 0, 0, 0, 0, 3536, 248, 0, 0, 0, 0, 4088, 256, 0, 0, 0, 0, 4296, 168, 0, 0, 0, 0, 4416, -80, 0, 0, 0, 0, 4456, -264 )
+}
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 208, -24, 0, 0, 0, 0, 1176, -48, 0, 0, 0, 0, 1584, -88, 0, 0, 0, 0, 1968, -392, 0, 0, 0, 0, 2424, -456, 0, 0, 0, 0, 2680, -224, 0, 0, 0, 0, 2960, 0, 0, 0, 0, 0, 3232, 152, 0, 0, 0, 0, 3984, 176, 0, 0, 0, 0, 4208, 32, 0, 0, 0, 0, 4304, -320 )
+}
 
 [node name="Level3" instance=ExtResource( 1 )]
+
+[node name="Floor" parent="." index="1"]
+tile_data = PoolIntArray( -327681, 5, 0, -393216, 5, 0, -393215, 5, 0, -393214, 5, 0, -393213, 5, 0, -393212, 5, 0, -393211, 5, 0, -393210, 5, 0, -393209, 5, 0, -393208, 5, 0, -393207, 5, 0, -393206, 5, 0, -262148, 5, 0, -262147, 5, 0, -262146, 5, 0, -262145, 5, 0, -327680, 5, 0, -327679, 5, 0, -327678, 5, 0, -327677, 5, 0, -327676, 5, 0, -327675, 5, 0, -327674, 5, 0, -327673, 5, 0, -327672, 5, 0, -327671, 5, 0, -327670, 5, 0, -327669, 5, 0, -196613, 5, 0, -196612, 5, 0, -196611, 5, 0, -196610, 5, 0, -196609, 5, 0, -262144, 5, 0, -262143, 5, 0, -262142, 5, 0, -262141, 5, 0, -262140, 5, 0, -262139, 5, 0, -262138, 5, 0, -262137, 5, 0, -262136, 5, 0, -262135, 5, 0, -262134, 5, 0, -262133, 5, 0, -262132, 5, 0, -131078, 5, 0, -131077, 5, 0, -131076, 5, 0, -131075, 5, 0, -131074, 5, 0, -131073, 5, 0, -196608, 5, 0, -196607, 5, 0, -196606, 5, 0, -196605, 5, 0, -196604, 5, 0, -196603, 5, 0, -196602, 5, 0, -196601, 5, 0, -196600, 5, 0, -196599, 5, 0, -196598, 5, 0, -196597, 5, 0, -196596, 5, 0, -65542, 5, 0, -65541, 5, 0, -65540, 5, 0, -65539, 5, 0, -65538, 5, 0, -65537, 5, 0, -131072, 5, 0, -131071, 5, 0, -131070, 5, 0, -131069, 5, 0, -131068, 5, 0, -131067, 5, 0, -131066, 5, 0, -131065, 5, 0, -131064, 5, 0, -131063, 5, 0, -131062, 5, 0, -131061, 5, 0, -7, 5, 0, -6, 5, 0, -5, 5, 0, -4, 5, 0, -3, 5, 0, -2, 5, 0, -1, 5, 0, -65536, 5, 0, -65535, 5, 0, -65534, 5, 0, -65533, 5, 0, -65532, 5, 0, -65531, 5, 0, -65530, 5, 0, -65529, 5, 0, -65528, 5, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, 65529, 5, 0, 65530, 5, 0, 65531, 5, 0, 65532, 5, 0, 65533, 5, 0, 65534, 5, 0, 65535, 5, 0, 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 131065, 5, 0, 131066, 5, 0, 131067, 5, 0, 131068, 5, 0, 131069, 5, 0, 131070, 5, 0, 131071, 5, 0, 65536, 5, 0, 65537, 5, 0, 65538, 5, 0, 65539, 5, 0, 65540, 5, 0, 65541, 5, 0, 65542, 5, 0, 65543, 5, 0, 65544, 5, 0, 65545, 5, 0, 65546, 5, 0, 65547, 5, 0, 196602, 5, 0, 196603, 5, 0, 196604, 5, 0, 196605, 5, 0, 196606, 5, 0, 196607, 5, 0, 131072, 5, 0, 131073, 5, 0, 131074, 5, 0, 131075, 5, 0, 131076, 5, 0, 131077, 5, 0, 131078, 5, 0, 131079, 5, 0, 131080, 5, 0, 131081, 5, 0, 131082, 5, 0, 131083, 5, 0, 262138, 5, 0, 262139, 5, 0, 262140, 5, 0, 262141, 5, 0, 262142, 5, 0, 262143, 5, 0, 196608, 5, 0, 196609, 5, 0, 196610, 5, 0, 196611, 5, 0, 196612, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 5, 0, 327677, 5, 0, 327678, 5, 0, 327679, 5, 0, 262144, 5, 0, 262145, 5, 0, 262147, 5, 0, 262148, 5, 0, 262149, 5, 0, 262150, 5, 0, 262151, 5, 0, 262152, 5, 0, 262153, 5, 0, 262154, 5, 0 )
+
+[node name="SafePlace" parent="SafePlaces" index="0" instance=ExtResource( 11 )]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SafePlaces/SafePlace" index="0"]
+polygon = PoolVector2Array( 3104, -496, 2864, -688, 2864, -1080, 3104, -1272, 3576, -1272, 3816, -1080, 3816, -688, 3576, -496 )
+
+[node name="Fences1" parent="Sorted" index="0"]
+tile_data = PoolIntArray( -458740, 1, 0, -458739, 2, 0, -458738, 2, 0, -458737, 0, 0, -393204, 3, 0, -393200, 3, 0, -327668, 3, 0, -327664, 3, 0, -262132, 0, 0, -262129, 1, 0, -131073, 0, 0, -196605, 1, 0, -196604, 2, 0, -196603, 2, 0, -196602, 2, 0, -196601, 0, 0, -196599, 1, 0, -196598, 2, 0, -196597, 2, 0, -196596, 0, 0, -196595, 3, 0, -196593, 3, 0, -131072, 2, 0, -131071, 2, 0, -131070, 2, 0, -131064, 2, 0, -131062, 1, 0, -131061, 0, 0, -131057, 3, 0, -65532, 1, 0, -65531, 2, 0, -65530, 0, 0, -65526, 0, 0, -65525, 1, 0, -65521, 3, 0, 3, 1, 0, 7, 3, 0, 15, 3, 0, 131071, 1, 0, 65536, 2, 0, 65537, 2, 0, 65538, 2, 0, 65543, 0, 0, 65550, 1, 0, 131080, 3, 0, 131086, 3, 0, 196616, 0, 0, 196621, 1, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0 )
+
+[node name="Trees" parent="Sorted" index="2"]
+tile_data = PoolIntArray( -458759, 0, 0, -458758, 0, 0, -458757, 0, 0, -458756, 0, 0, -458755, 0, 0, -393225, 0, 0, -393224, 0, 0, -393223, 0, 0, -393222, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -327691, 0, 0, -327690, 0, 0, -327689, 0, 0, -327688, 0, 0, -327687, 0, 0, -327686, 0, 0, -327685, 0, 0, -327684, 0, 0, -327683, 0, 0, -262155, 0, 0, -262154, 0, 0, -262153, 0, 0, -262152, 0, 0, -262151, 0, 0, -262150, 0, 0, -262149, 0, 0, -262148, 0, 0, -196620, 0, 0, -196619, 0, 0, -196618, 0, 0, -196617, 0, 0, -196616, 0, 0, -196615, 0, 0, -131084, 0, 0, -131083, 0, 0, -131082, 0, 0, -131081, 0, 0, -131080, 0, 0, -65548, 0, 0, -65547, 0, 0, -65546, 0, 0, -65545, 0, 0, -12, 0, 0, -11, 0, 0, -10, 0, 0, -9, 0, 0, -8, 0, 0, 65524, 0, 0, 65525, 0, 0, 65526, 0, 0, 65527, 0, 0, 131061, 0, 0, 131062, 0, 0, 131063, 0, 0, 131064, 0, 0, 131065, 0, 0, 196596, 0, 0, 196597, 0, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 262134, 0, 0, 262135, 0, 0, 262136, 0, 0, 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 327670, 0, 0, 327671, 0, 0, 327672, 0, 0, 327673, 0, 0, 327674, 0, 0, 327675, 0, 0, 393209, 0, 0, 393210, 0, 0, 393211, 0, 0 )
+
+[node name="Lake" parent="Sorted/Hazards" index="0" instance=ExtResource( 2 )]
+position = Vector2( 2616, 560 )
+
+[node name="RedSafePost" parent="Sorted/Obstacles" index="0" instance=ExtResource( 10 )]
+position = Vector2( 3088, -480 )
+
+[node name="RedSafePost2" parent="Sorted/Obstacles" index="1" instance=ExtResource( 10 )]
+position = Vector2( 3560, -480 )
+
+[node name="Rock1" parent="Sorted/Obstacles" index="2" instance=ExtResource( 9 )]
+position = Vector2( -432, -536 )
+
+[node name="Rock2" parent="Sorted/Obstacles" index="3" instance=ExtResource( 8 )]
+position = Vector2( -296, 312 )
+
+[node name="Rock4" parent="Sorted/Obstacles" index="4" instance=ExtResource( 8 )]
+position = Vector2( -1408, -168 )
+
+[node name="Herd" parent="Sorted/Herds" index="0" instance=ExtResource( 3 )]
+
+[node name="Sheep" parent="Sorted/Herds/Herd" index="0" instance=ExtResource( 4 )]
+position = Vector2( 336, -24 )
+
+[node name="Sheep2" parent="Sorted/Herds/Herd" index="1" instance=ExtResource( 4 )]
+position = Vector2( 736, 48 )
+
+[node name="Sheep3" parent="Sorted/Herds/Herd" index="2" instance=ExtResource( 4 )]
+position = Vector2( 672, -184 )
+
+[node name="Sheep4" parent="Sorted/Herds/Herd" index="3" instance=ExtResource( 4 )]
+position = Vector2( 512, 48 )
+
+[node name="Sheep5" parent="Sorted/Herds/Herd" index="4" instance=ExtResource( 4 )]
+position = Vector2( 504, -80 )
+
+[node name="Sheep6" parent="Sorted/Herds/Herd" index="5" instance=ExtResource( 4 )]
+position = Vector2( 440, -152 )
+
+[node name="Rabbit" parent="Sorted/Predators" index="0" instance=ExtResource( 6 )]
+position = Vector2( 2232, -224 )
+
+[node name="PredatorPath" parent="Sorted/Predators/Rabbit" index="4" instance=ExtResource( 5 )]
+curve = SubResource( 1 )
+
+[node name="Wolf" parent="Sorted/Predators" index="1" instance=ExtResource( 7 )]
+position = Vector2( -960, -160 )
+
+[node name="PredatorPath" parent="Sorted/Predators/Wolf" index="4" instance=ExtResource( 5 )]
+curve = SubResource( 2 )
+
+[node name="Wolf" parent="Sorted/Predators/Wolf" index="5" instance=ExtResource( 7 )]
+position = Vector2( -160, 160 )
+
+[node name="PredatorPath" parent="Sorted/Predators/Wolf/Wolf" index="4" instance=ExtResource( 5 )]
+curve = SubResource( 3 )
+
+[node name="Wolf2" parent="Sorted/Predators/Wolf" index="6" instance=ExtResource( 7 )]
+position = Vector2( 16, 256 )
+
+[node name="PredatorPath" parent="Sorted/Predators/Wolf/Wolf2" index="4" instance=ExtResource( 5 )]
+curve = SubResource( 4 )
+
+[node name="Shepherd" parent="Sorted" index="7"]
+position = Vector2( 0, 0 )
