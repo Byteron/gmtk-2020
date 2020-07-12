@@ -27,6 +27,10 @@ func move() -> void:
 	move_and_slide(motion)
 
 
+func step() -> void:
+	pass
+
+
 func change_state(state_name: String) -> void:
 	print("%s: %s" % [name, state_name])
 	fsm.change_state(state_name)

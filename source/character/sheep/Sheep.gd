@@ -9,6 +9,10 @@ func _ready() -> void:
 	change_state("Idle")
 
 
+func step() -> void:
+	SFX.play_sfx("AnimalFootstep")
+
+
 func get_herd_center() -> Vector2:
 	if not herd:
 		return global_position

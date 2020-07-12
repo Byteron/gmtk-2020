@@ -1,5 +1,5 @@
 extends Predator
-class_name Wolf
+class_name Rabbit
 
 
 func step() -> void:

@@ -29,7 +29,7 @@ streams = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ) ]
 
 [node name="Sheep" type="Node" parent="."]
 
-[node name="SheepFootstep" type="Node" parent="Sheep"]
+[node name="AnimalFootstep" type="Node" parent="Sheep"]
 script = ExtResource( 3 )
 stream = ExtResource( 11 )
 streams = [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 15 ) ]
