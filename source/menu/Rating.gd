@@ -23,9 +23,9 @@ func rate(sheeps: int, max_sheeps: int) -> void:
 
 
 func animate(stars: int):
-	yield(get_tree().create_timer(0.5), "timeout")
+	yield(get_tree().create_timer(0.3), "timeout")
 	
 	for i in stars:
 		
 		star_frames[i].animate()
-		yield(get_tree().create_timer(0.5), "timeout")
+		yield(get_tree().create_timer(0.3), "timeout")

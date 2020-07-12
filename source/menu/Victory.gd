@@ -8,7 +8,7 @@ onready var ratings := $Rating
 func _ready() -> void:
 	Global.increase_level()
 	ratings.rate(Global.sheeps, Global.max_sheeps)
-
+	# ratings.rate(10, 10)
 
 func _on_NextLevel_pressed() -> void:
 	Global.continue_game()
