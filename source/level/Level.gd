@@ -11,10 +11,6 @@ func _input(event: InputEvent) -> void:
 		next_level()
 
 
-func victory() -> void:
-	next_level()
-
-
 func next_level() -> void:
 	var next_level =  LEVEL % (level_number + 1)
 	
@@ -28,11 +24,24 @@ func next_level() -> void:
 		Scene.change("TitleScreen", true)
 
 
+func victory() -> void:
+	next_level()
+
+
+func game_over() -> void:
+	Scene.change("GameOver", true)
+
+
 func _on_WinConditionCheckTimer_timeout() -> void:
 	var safe_sheeps := 0
 	
 	for place in get_tree().get_nodes_in_group("SafePlace"):
 		safe_sheeps += place.get_sheeps().size()
 	
-	if safe_sheeps == get_tree().get_nodes_in_group("Sheep").size():
+	var sheeps = get_tree().get_nodes_in_group("Sheep")
+	
+	if sheeps.size() == 0:
+		game_over()
+	
+	elif safe_sheeps == sheeps.size():
 		victory()

@@ -4,7 +4,7 @@ var current_level := 0
 
 func _ready() -> void:
 	Scene.register_scene("TitleScreen", "res://source/menu/TitleScreen.tscn")
-	Scene.register_scene("Game", "res://source/game/Game.tscn")
+	Scene.register_scene("GameOver", "res://source/menu/GameOver.tscn")
 	
 	Scene.register_scene("Level1", "res://source/level/levels/Level1.tscn")
 	Scene.register_scene("Level2", "res://source/level/levels/Level2.tscn")
@@ -13,7 +13,18 @@ func _ready() -> void:
 
 	SFX.play_sfx("Wind")
 
-	
+
+func new_game() -> void:
+	current_level = 1
+	save_game()
+	Scene.change("Level1", true)
+
+
+func continue_game() -> void:
+	var level = "Level%d" % current_level
+	Scene.change(level, true)
+
+
 func load_game() -> void:
 	var save_game = load("user://save_game.tres")
 	
