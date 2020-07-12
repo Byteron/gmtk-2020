@@ -16,6 +16,8 @@ func enter(host: Node) -> void:
 		predator.change_state("Patrol")
 		return
 	
+	target.connect("died", self, "_on_target_died")
+	
 	predator.anim.play("walk")
 	SFX.play_sfx("WolfAttack")
 	attack_timer.start()
@@ -24,7 +26,7 @@ func enter(host: Node) -> void:
 func update(host: Node, delta: float) -> void:
 	var predator := host as Predator
 	
-	if attack_timer.is_stopped():
+	if attack_timer.is_stopped() or not target:
 		if not predator.is_sheep_in_range() or not target:
 			predator.change_state("Patrol")
 			return
@@ -45,3 +47,6 @@ func exit(host: Node) -> void:
 	var predator := host as Wolf
 	target = null
 
+
+func _on_target_died() -> void:
+	target = null

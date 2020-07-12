@@ -1,6 +1,8 @@
 extends Character
 class_name Sheep
 
+signal died
+
 onready var safe_zone := $SafeZone
 
 onready var sweat_particles := $SweatParticles
@@ -33,12 +35,14 @@ func bleed() -> void:
 func drown() -> void:
 	is_dead = true
 	coll.disabled = true
+	emit_signal("died")
 	change_state("Drown")
 
 
 func kill() -> void:
 	is_dead = true
 	coll.disabled = true
+	emit_signal("died")
 	change_state("Die")
 
 
