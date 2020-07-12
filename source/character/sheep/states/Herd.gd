@@ -17,8 +17,6 @@ func update(host: Node, delta: float) -> void:
 	
 	sheep.motion = direction * sheep.orientation * speed
 	
-	# print(sheep.motion)
-	
 	if sheep.is_predator_nearby():
 		sheep.change_state("Flee")
 	elif sheep.is_in_herd():

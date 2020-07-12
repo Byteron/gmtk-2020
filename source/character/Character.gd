@@ -32,5 +32,5 @@ func step() -> void:
 
 
 func change_state(state_name: String) -> void:
-	print("%s: %s" % [name, state_name])
+	# print("%s: %s" % [name, state_name])
 	fsm.change_state(state_name)

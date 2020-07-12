@@ -22,7 +22,6 @@ func update(host: Node, delta: float) -> void:
 		
 		if not target or predator.global_position.distance_to(target) < 5:
 			target = path.pop_front()
-			print("Target: ", target, " Position: ", predator.global_position)
 	
 		var direction = predator.global_position.direction_to(target)
 		
