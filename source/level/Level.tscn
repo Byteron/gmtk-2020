@@ -243,27 +243,21 @@ format = 1
 
 [node name="Sorted" type="YSort" parent="."]
 
-[node name="Fences1" type="TileMap" parent="Sorted" groups=[
-"Obstacle",
-]]
+[node name="Fences1" type="TileMap" parent="Sorted"]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 237, 195 )
 cell_tile_origin = 1
 cell_y_sort = true
 format = 1
 
-[node name="Fences2" type="TileMap" parent="Sorted" groups=[
-"Obstacle",
-]]
+[node name="Fences2" type="TileMap" parent="Sorted"]
 tile_set = SubResource( 14 )
 cell_size = Vector2( 237, 195 )
 cell_tile_origin = 1
 cell_y_sort = true
 format = 1
 
-[node name="Trees" type="TileMap" parent="Sorted" groups=[
-"Obstacle",
-]]
+[node name="Trees" type="TileMap" parent="Sorted"]
 scale = Vector2( 0.3, 0.3 )
 tile_set = SubResource( 15 )
 cell_size = Vector2( 650, 500 )
