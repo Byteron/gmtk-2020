@@ -16,6 +16,8 @@ func _ready() -> void:
 	Scene.register_scene("Level3", "res://source/level/levels/Level3.tscn")
 	Scene.register_scene("Level4", "res://source/level/levels/Level4.tscn")
 	Scene.register_scene("Level5", "res://source/level/levels/Level5.tscn")
+	Scene.register_scene("Level6", "res://source/level/levels/Level6.tscn")
+	Scene.register_scene("Level7", "res://source/level/levels/Level7.tscn")
 	
 	load_game()
 
