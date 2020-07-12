@@ -8,6 +8,9 @@ func _ready() -> void:
 	
 	Scene.register_scene("Level1", "res://source/level/levels/Level1.tscn")
 	Scene.register_scene("Level2", "res://source/level/levels/Level2.tscn")
+	Scene.register_scene("Level3", "res://source/level/levels/Level3.tscn")
+	Scene.register_scene("Level4", "res://source/level/levels/Level4.tscn")
+	Scene.register_scene("Level5", "res://source/level/levels/Level5.tscn")
 	
 	load_game()
 
@@ -20,9 +23,22 @@ func new_game() -> void:
 	Scene.change("Level1", true)
 
 
-func continue_game() -> void:
+func continue_game_current_level() -> void:
 	var level = "Level%d" % current_level
 	Scene.change(level, true)
+
+
+func continue_game_next_level() -> void:
+	var next_level = "Level%d" % (current_level + 1)
+	
+	if Scene.has_scene(next_level):
+		Global.current_level = current_level + 1
+		Global.save_game()
+		Scene.change(next_level, true)
+	else:
+		Global.current_level = 1
+		Global.save_game()
+		Scene.change("TitleScreen", true)
 
 
 func load_game() -> void:
