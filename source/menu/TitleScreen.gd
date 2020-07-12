@@ -17,7 +17,7 @@ func _on_Play_pressed() -> void:
 
 
 func _on_Continue_pressed() -> void:
-	Global.continue_game_current_level()
+	Global.continue_game()
 
 
 func _on_Quit_pressed() -> void:

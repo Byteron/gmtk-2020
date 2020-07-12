@@ -59,6 +59,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://source/character/predator/rabbit/Rabbit.gd"
 }, {
+"base": "Control",
+"class": "Rating",
+"language": "GDScript",
+"path": "res://source/menu/Rating.gd"
+}, {
 "base": "Resource",
 "class": "SaveGame",
 "language": "GDScript",
@@ -93,6 +98,11 @@ _global_script_classes=[ {
 "class": "SoundBooth",
 "language": "GDScript",
 "path": "res://addons/audio_booth/source/sfx/SoundBooth.gd"
+}, {
+"base": "TextureRect",
+"class": "StarFrame",
+"language": "GDScript",
+"path": "res://source/menu/StarFrame.gd"
 }, {
 "base": "Node",
 "class": "State",
@@ -130,6 +140,7 @@ _global_script_class_icons={
 "Predator": "",
 "PredatorPath": "",
 "Rabbit": "",
+"Rating": "",
 "SaveGame": "",
 "SceneLoader": "",
 "Sheep": "",
@@ -137,6 +148,7 @@ _global_script_class_icons={
 "Song": "",
 "Sound": "",
 "SoundBooth": "",
+"StarFrame": "",
 "State": "",
 "StingerContainer": "",
 "TrackContainer": "",

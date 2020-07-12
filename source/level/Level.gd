@@ -11,7 +11,14 @@ func _input(event: InputEvent) -> void:
 		Scene.change("Victory", true)
 
 
+func _ready() -> void:
+	var sheeps = get_tree().get_nodes_in_group("Sheep")
+	Global.max_sheeps = sheeps.size()
+
+
 func victory() -> void:
+	var sheeps = get_tree().get_nodes_in_group("Sheep")
+	Global.sheeps = sheeps.size()
 	Scene.change("Victory", true)
 
 

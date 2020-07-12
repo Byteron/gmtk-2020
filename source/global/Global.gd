@@ -2,6 +2,10 @@ extends Node
 
 var current_level := 0
 
+var sheeps := 0
+var max_sheeps := 0
+
+
 func _ready() -> void:
 	Scene.register_scene("TitleScreen", "res://source/menu/TitleScreen.tscn")
 	Scene.register_scene("GameOver", "res://source/menu/GameOver.tscn")
@@ -24,21 +28,27 @@ func new_game() -> void:
 	Scene.change("Level1", true)
 
 
-func continue_game_current_level() -> void:
-	var level = "Level%d" % current_level
-	Scene.change(level, true)
+func increase_level() -> void:
+	current_level += 1
+	save_game()
+
+func decrease_level() -> void:
+	current_level -= 1
+	save_game()
 
 
-func continue_game_next_level() -> void:
-	var next_level = "Level%d" % (current_level + 1)
+func reset_level() -> void:
+	current_level = 0
+	save_game()
+
+
+func continue_game() -> void:
+	var next_level = "Level%d" % current_level
 	
 	if Scene.has_scene(next_level):
-		Global.current_level = current_level + 1
-		Global.save_game()
 		Scene.change(next_level, true)
 	else:
-		Global.current_level = 1
-		Global.save_game()
+		reset_level()
 		Scene.change("TitleScreen", true)
 
 
