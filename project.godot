@@ -158,7 +158,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GMTK 2020"
+config/name="Zombherd"
 run/main_scene="res://source/menu/TitleScreen.tscn"
 
 [autoload]
