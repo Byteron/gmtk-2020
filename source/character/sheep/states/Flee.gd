@@ -25,6 +25,8 @@ func update(host: Node, delta: float) -> void:
 			else:
 				direction = direction.linear_interpolate(predator.global_position.direction_to(sheep.global_position), 0.5) 
 			
+			direction = direction.linear_interpolate(sheep.get_herd_direction(), 0.3)
+			
 			walk = true
 	
 	if walk:
