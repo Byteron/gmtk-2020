@@ -8,7 +8,7 @@ var motion := Vector2()
 
 onready var fsm := $FSM as FiniteStateMachine
 onready var sprite := $Sprite as Sprite
-onready var anim := $AnimationPlayer
+onready var anim := $AnimationPlayer as AnimationPlayer
 
 
 func _ready() -> void:

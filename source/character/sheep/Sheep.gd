@@ -20,6 +20,10 @@ func sweat() -> void:
 	sweat_particles.emitting = true
 
 
+func drown() -> void:
+	change_state("Drown")
+	
+	
 func get_herd_center() -> Vector2:
 	if not herd:
 		return global_position
