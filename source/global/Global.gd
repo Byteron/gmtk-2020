@@ -5,6 +5,7 @@ var current_level := 0
 func _ready() -> void:
 	Scene.register_scene("TitleScreen", "res://source/menu/TitleScreen.tscn")
 	Scene.register_scene("GameOver", "res://source/menu/GameOver.tscn")
+	Scene.register_scene("Victory", "res://source/menu/Victory.tscn")
 	
 	Scene.register_scene("Level1", "res://source/level/levels/Level1.tscn")
 	Scene.register_scene("Level2", "res://source/level/levels/Level2.tscn")

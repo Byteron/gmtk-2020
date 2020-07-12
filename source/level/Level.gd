@@ -8,24 +8,11 @@ export var level_number := 0
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
-		next_level()
-
-
-func next_level() -> void:
-	var next_level =  LEVEL % (level_number + 1)
-	
-	if Scene.has_scene(next_level):
-		Global.current_level = level_number + 1
-		Global.save_game()
-		Scene.change(next_level, true)
-	else:
-		Global.current_level = 1
-		Global.save_game()
-		Scene.change("TitleScreen", true)
+		Scene.change("Victory", true)
 
 
 func victory() -> void:
-	next_level()
+	Scene.change("Victory", true)
 
 
 func game_over() -> void:

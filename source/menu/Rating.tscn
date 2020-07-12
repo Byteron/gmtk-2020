@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://source/menu/StarFrame.tscn" type="PackedScene" id=1]
+
+[node name="Rating" type="Control"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StarFrames" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StarFrame" parent="StarFrames" instance=ExtResource( 1 )]
+margin_left = -147.0
+margin_top = -81.0
+margin_right = -63.0
+margin_bottom = 4.0
+
+[node name="StarFrame2" parent="StarFrames" instance=ExtResource( 1 )]
+margin_left = -45.0
+margin_top = -123.0
+margin_right = 39.0
+margin_bottom = -38.0
+
+[node name="StarFrame3" parent="StarFrames" instance=ExtResource( 1 )]
+margin_left = 56.0
+margin_top = -77.0
+margin_right = 140.0
+margin_bottom = 8.0
