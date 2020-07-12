@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://source/level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://source/interactable/water/Lake.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://source/character/sheep/Sheep.tscn" type="PackedScene" id=6]
 [ext_resource path="res://source/character/predator/rabbit/Rabbit.tscn" type="PackedScene" id=7]
 [ext_resource path="res://source/core/PredatorPath.tscn" type="PackedScene" id=8]
+[ext_resource path="res://source/objects/Rock2.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -27,6 +28,9 @@ polygon = PoolVector2Array( 2392, -296, 2632, -496, 3104, -496, 3336, -304, 3336
 [node name="Fences1" parent="Sorted" index="0"]
 tile_data = PoolIntArray( -393214, 1, 0, -393213, 2, 0, -393212, 2, 0, -393211, 2, 0, -393210, 0, 0, -327679, 1, 0, -327677, 1, 0, -327676, 2, 0, -327675, 0, 0, -327673, 0, 0, -196609, 1, 0, -262144, 2, 0, -262141, 0, 0, -262139, 1, 0, -262136, 3, 0, -131074, 1, 0, -196604, 2, 0, -196600, 0, 0, -196598, 1, 0, -196597, 2, 0, -196596, 2, 0, -196595, 0, 0, -65538, 3, 0, -131063, 2, 0, -131058, 3, 0, -2, 3, 0, -65522, 3, 0, 65534, 0, 0, 1, 1, 0, 2, 0, 0, 6, 1, 0, 7, 2, 0, 8, 2, 0, 9, 2, 0, 10, 0, 0, 13, 1, 0, 131071, 2, 0, 65536, 2, 0, 65539, 2, 0, 65540, 2, 0, 65541, 2, 0, 65547, 2, 0, 65548, 2, 0 )
 
+[node name="Trees" parent="Sorted" index="2"]
+tile_data = PoolIntArray( -720887, 0, 0, -655358, 0, 0, -655357, 0, 0, -589822, 0, 0, -589821, 0, 0, -524288, 0, 0, -524287, 0, 0, -524279, 0, 0, -524278, 0, 0, -458752, 0, 0, -458751, 0, 0, -458741, 0, 0, -393210, 0, 0, -393206, 0, 0, -393205, 0, 0, -262148, 0, 0, -327669, 0, 0, -327668, 0, 0, -131077, 0, 0, -131076, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -131064, 0, 0, -7, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -65528, 0, 0, -65518, 0, 0, -65517, 0, 0, 65529, 0, 0, 65531, 0, 0, 65532, 0, 0, 18, 0, 0, 131068, 0, 0, 131069, 0, 0, 65539, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131080, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 131090, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196610, 0, 0, 196611, 0, 0, 196623, 0, 0, 196625, 0, 0, 196626, 0, 0, 393212, 0, 0, 393213, 0, 0, 393214, 0, 0 )
+
 [node name="Lake" parent="Sorted/Hazards" index="0" instance=ExtResource( 2 )]
 position = Vector2( 1056, -8 )
 
@@ -35,6 +39,15 @@ position = Vector2( 2376, -288 )
 
 [node name="RedSafePost2" parent="Sorted/Obstacles" index="1" instance=ExtResource( 5 )]
 position = Vector2( 2376, 104 )
+
+[node name="Rock2" parent="Sorted/Obstacles" index="2" instance=ExtResource( 9 )]
+position = Vector2( 992, -688 )
+
+[node name="Rock3" parent="Sorted/Obstacles" index="3" instance=ExtResource( 9 )]
+position = Vector2( 1584, -1200 )
+
+[node name="Rock4" parent="Sorted/Obstacles" index="4" instance=ExtResource( 9 )]
+position = Vector2( -424, -592 )
 
 [node name="Herd" parent="Sorted/Herds" index="0" instance=ExtResource( 4 )]
 
