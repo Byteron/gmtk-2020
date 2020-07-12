@@ -19,10 +19,6 @@ tile_data = PoolIntArray( -262146, 5, 0, -262145, 5, 0, -327680, 5, 0, -327679, 
 position = Vector2( 2208, 1024 )
 polygon = PoolVector2Array( 656, -736, 896, -928, 1368, -928, 1608, -736, 1608, -352, 1368, -152, 896, -152, 656, -344 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="SafePlaces/SafePlace" index="1"]
-position = Vector2( 4784, 72 )
-polygon = PoolVector2Array( -1211.65, -258.265, -1299.65, -869.518, -790.669, -962.276, -303.094, -576.973, -680, -176 )
-
 [node name="Lake" parent="Environment" index="0" instance=ExtResource( 5 )]
 position = Vector2( 1200, 392 )
 
