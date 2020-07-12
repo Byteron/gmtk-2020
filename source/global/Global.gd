@@ -20,6 +20,7 @@ func _ready() -> void:
 	load_game()
 
 	SFX.play_sfx("Wind")
+	SFX.play_sfx("Music")
 
 
 func new_game() -> void:

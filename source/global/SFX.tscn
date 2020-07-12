@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://addons/audio_booth/source/sfx/SoundBooth.gd" type="Script" id=1]
 [ext_resource path="res://audio/sfx/playerGrassFS/Player_FS_Grass-002.wav" type="AudioStream" id=2]
@@ -16,24 +16,59 @@
 [ext_resource path="res://audio/sfx/animalGrassFS/Animal_FS_Grass-006.wav" type="AudioStream" id=14]
 [ext_resource path="res://audio/sfx/animalGrassFS/Animal_FS_Grass-009.wav" type="AudioStream" id=15]
 [ext_resource path="res://audio/sfx/Ambient_Wind.wav" type="AudioStream" id=16]
+[ext_resource path="res://audio/sfx/UI_Select.wav" type="AudioStream" id=17]
+[ext_resource path="res://audio/sfx/UI_Hover.wav" type="AudioStream" id=18]
+[ext_resource path="res://audio/sfx/Wolf_Attack-003.wav" type="AudioStream" id=19]
+[ext_resource path="res://audio/sfx/Wolf_Eat.wav" type="AudioStream" id=20]
+[ext_resource path="res://audio/sfx/Wolf_Attack-001.wav" type="AudioStream" id=21]
+[ext_resource path="res://audio/sfx/Wolf_Attack-002.wav" type="AudioStream" id=22]
+[ext_resource path="res://audio/sfx/Water_Splash.wav" type="AudioStream" id=23]
+[ext_resource path="res://audio/sfx/Sheep_Die.wav" type="AudioStream" id=24]
+[ext_resource path="res://audio/music/music_loop.wav" type="AudioStream" id=25]
 
 [node name="SFX" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Shepherd" type="Node" parent="."]
+[node name="Wind" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 16 )
 
-[node name="ShepherdFootstep" type="Node" parent="Shepherd"]
+[node name="Music" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 25 )
+volume_db = -20.0
+
+[node name="ShepherdFootstep" type="Node" parent="."]
 script = ExtResource( 3 )
 stream = ExtResource( 4 )
 streams = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ) ]
 
-[node name="Sheep" type="Node" parent="."]
-
-[node name="AnimalFootstep" type="Node" parent="Sheep"]
+[node name="AnimalFootstep" type="Node" parent="."]
 script = ExtResource( 3 )
 stream = ExtResource( 11 )
 streams = [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 15 ) ]
 
-[node name="Wind" type="Node" parent="."]
+[node name="WolfEat" type="Node" parent="."]
 script = ExtResource( 3 )
-stream = ExtResource( 16 )
+stream = ExtResource( 20 )
+
+[node name="WolfAttack" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 21 )
+streams = [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 19 ) ]
+
+[node name="SheepDie" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 24 )
+
+[node name="WaterSplash" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 23 )
+
+[node name="ButtonHover" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 18 )
+
+[node name="ButtonClick" type="Node" parent="."]
+script = ExtResource( 3 )
+stream = ExtResource( 17 )

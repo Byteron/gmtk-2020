@@ -14,6 +14,10 @@ func enter(host: Node) -> void:
 func update(host: Node, delta: float) -> void:
 	var predator := host as Predator
 	
+	if predator.is_sheep_in_range():
+		predator.change_state("Attack")
+		return
+	
 	if not path:
 		path = predator.path.path.duplicate()
 	

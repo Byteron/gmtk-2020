@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/UI_Hover.wav-f2ce673e64d98c15a7fe65f2799f674d.sample"
+
+[deps]
+
+source_file="res://audio/sfx/UI_Hover.wav"
+dest_files=[ "res://.import/UI_Hover.wav-f2ce673e64d98c15a7fe65f2799f674d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

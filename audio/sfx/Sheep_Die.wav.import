@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sheep_Die.wav-ba0e89ecb80d67b838e7a9a7a91d4484.sample"
+
+[deps]
+
+source_file="res://audio/sfx/Sheep_Die.wav"
+dest_files=[ "res://.import/Sheep_Die.wav-ba0e89ecb80d67b838e7a9a7a91d4484.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

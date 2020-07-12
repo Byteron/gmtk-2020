@@ -4,9 +4,14 @@ class_name Sheep
 onready var safe_zone := $SafeZone
 
 onready var sweat_particles := $SweatParticles
+onready var blood_particles := $BloodParticles
 
 
 var herd : Herd = null
+
+
+var is_dead := false
+
 
 func _ready() -> void:
 	change_state("Idle")
@@ -20,10 +25,20 @@ func sweat() -> void:
 	sweat_particles.emitting = true
 
 
+func bleed() -> void:
+	blood_particles.emitting = true
+
+
 func drown() -> void:
+	is_dead = true
 	change_state("Drown")
-	
-	
+
+
+func kill() -> void:
+	is_dead = true
+	change_state("Die")
+
+
 func get_herd_center() -> Vector2:
 	if not herd:
 		return global_position
