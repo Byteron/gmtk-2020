@@ -22,3 +22,7 @@ func _on_Continue_pressed() -> void:
 
 func _on_Quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_Credits_pressed() -> void:
+	Scene.change("Credits", true)
