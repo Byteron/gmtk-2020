@@ -2,7 +2,6 @@
 
 [ext_resource path="res://source/core/Herd.gd" type="Script" id=3]
 
-
 [node name="Herd" type="YSort" groups=[
 "Herd",
 ]]
