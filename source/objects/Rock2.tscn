@@ -7,9 +7,10 @@
 ]]
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -80 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( 4.36353, 118.407 )
-polygon = PoolVector2Array( -33.1633, -0.758209, 93.4587, 1.13165, 201.182, 0.501709, 345.443, -119.191, 314.575, -257.782, 10.304, -311.329, -266.879, -305.659, -308.456, -116.671, -132.697, 1.13165 )
+polygon = PoolVector2Array( -69.3635, -59.407, 16.6365, -60.407, 96.6365, -59.407, 170.636, -116.407, 153.636, -193.407, 18.6365, -228.407, -69.3635, -218.407, -159.364, -121.407, -96.3635, -79.407 )
