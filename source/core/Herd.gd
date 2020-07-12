@@ -13,6 +13,8 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	var last_center = center
+	
 	center = Vector2()
 	
 	var dead := 0
@@ -20,7 +22,7 @@ func _process(delta: float) -> void:
 	for child in get_children():
 		var sheep := child as Node2D
 		
-		if sheep.is_dead:
+		if sheep.is_dead or sheep.global_position.distance_to(last_center) > max_radius:
 			dead += 1
 			continue
 		
