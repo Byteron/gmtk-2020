@@ -17,13 +17,10 @@ tile_data = PoolIntArray( -655367, 5, 0, -655366, 5, 0, -655365, 5, 0, -655364, 
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SafePlaces/SafePlace" index="0"]
 position = Vector2( -728, -1229 )
-polygon = PoolVector2Array( -200, -435, -432, -627, -432, -1011, -200, -1211, 752, -1219, 984, -1011, 984, -627, 752, -435 )
+polygon = PoolVector2Array( 40, -435, -200, -619, -200, -1011, 32, -1211, 512, -1211, 752, -1011, 752, -627, 512, -435 )
 
 [node name="Fences1" parent="Sorted" index="0"]
-tile_data = PoolIntArray( -786437, 1, 0, -786436, 2, 0, -786435, 2, 0, -786434, 2, 0, -786433, 2, 0, -851968, 0, 0, -720901, 3, 0, -786431, 3, 0, -655365, 3, 0, -720895, 3, 0, -589830, 3, 0, -589829, 0, 0, -655360, 1, 0, -655358, 3, 0, -524294, 0, 0, -524292, 2, 0, -524289, 2, 0, -589823, 1, 0, -458757, 2, 0, -524288, 2, 0, -393223, 1, 0, -458750, 0, 0, -327687, 3, 0, -393213, 3, 0, -262151, 3, 0, -262149, 1, 0, -262148, 2, 0, -262147, 0, 0, -327677, 3, 0, -196616, 1, 0, -196613, 3, 0, -196610, 3, 0, -262141, 0, 0, -131080, 3, 0, -131077, 0, 0, -131075, 1, 0, -196604, 3, 0, -65544, 3, 0, -65540, 2, 0, -131068, 3, 0, -8, 3, 0, -65532, 3, 0, 65528, 3, 0, 4, 3, 0, 131064, 0, 0, 65539, 1, 0, 196601, 0, 0, 131074, 1, 0, 262138, 2, 0, 262139, 0, 0, 196608, 1, 0, 196609, 2, 0, 327676, 3, 0, 262144, 3, 0, 393212, 0, 0, 393215, 1, 0, 458749, 2, 0, 458750, 2, 0 )
-
-[node name="Fences2" parent="Sorted" index="1"]
-tile_data = PoolIntArray( -655366, 1, 0, -720895, 0, 0, -524292, 1, 0, -524289, 0, 0, -458758, 1, 0, -524287, 0, 0 )
+tile_data = PoolIntArray( -786436, 1, 0, -786435, 2, 0, -786434, 2, 0, -786433, 0, 0, -720900, 3, 0, -786432, 3, 0, -655364, 3, 0, -720896, 3, 0, -589828, 0, 0, -589825, 1, 0, -524291, 3, 0, -524289, 3, 0, -458756, 1, 0, -458753, 0, 0, -393222, 1, 0, -393221, 2, 0, -458752, 2, 0, -458751, 0, 0, -327686, 3, 0, -393214, 3, 0, -262150, 3, 0, -262149, 1, 0, -262148, 2, 0, -262147, 0, 0, -327678, 3, 0, -196615, 1, 0, -196613, 3, 0, -196610, 3, 0, -262143, 1, 0, -131079, 3, 0, -131077, 0, 0, -131075, 1, 0, -196607, 3, 0, -65543, 3, 0, -65540, 2, 0, -131071, 3, 0, -7, 3, 0, -65536, 1, 0, 65529, 0, 0, 65535, 1, 0, 131066, 2, 0, 131067, 2, 0, 131068, 2, 0, 131069, 2, 0, 131070, 2, 0 )
 
 [node name="RedSafePost" parent="Sorted/Obstacles" index="0" instance=ExtResource( 5 )]
 position = Vector2( -704, -1648 )
@@ -35,42 +32,42 @@ position = Vector2( -240, -1648 )
 radius = 200
 
 [node name="Sheep5" parent="Sorted/Herds/Herd" index="0" instance=ExtResource( 2 )]
-position = Vector2( -1032, -24 )
+position = Vector2( -1064, -136 )
 
 [node name="Sheep6" parent="Sorted/Herds/Herd" index="1" instance=ExtResource( 2 )]
-position = Vector2( -1196.64, 148.7 )
+position = Vector2( -1228.64, 36.7 )
 
 [node name="Sheep7" parent="Sorted/Herds/Herd" index="2" instance=ExtResource( 2 )]
-position = Vector2( -1024, 176 )
+position = Vector2( -1056, 64 )
 
 [node name="Sheep2" parent="Sorted/Herds/Herd" index="3" instance=ExtResource( 2 )]
-position = Vector2( -1372, -120 )
+position = Vector2( -1404, -232 )
 
 [node name="Sheep3" parent="Sorted/Herds/Herd" index="4" instance=ExtResource( 2 )]
-position = Vector2( -1416, 65 )
+position = Vector2( -1448, -47 )
 
 [node name="Sheep4" parent="Sorted/Herds/Herd" index="5" instance=ExtResource( 2 )]
-position = Vector2( -1384, 304 )
+position = Vector2( -1272, -128 )
 
 [node name="Herd2" parent="Sorted/Herds" index="1" instance=ExtResource( 3 )]
 
 [node name="Sheep" parent="Sorted/Herds/Herd2" index="0" instance=ExtResource( 2 )]
-position = Vector2( 50, -991 )
+position = Vector2( -40, -905 )
 
 [node name="Sheep2" parent="Sorted/Herds/Herd2" index="1" instance=ExtResource( 2 )]
-position = Vector2( 118, -856 )
+position = Vector2( 28, -770 )
 
 [node name="Sheep3" parent="Sorted/Herds/Herd2" index="2" instance=ExtResource( 2 )]
-position = Vector2( 310, -1030 )
+position = Vector2( 220, -944 )
 
 [node name="Sheep4" parent="Sorted/Herds/Herd2" index="3" instance=ExtResource( 2 )]
-position = Vector2( 317, -838 )
+position = Vector2( 227, -752 )
 
 [node name="Sheep5" parent="Sorted/Herds/Herd2" index="4" instance=ExtResource( 2 )]
-position = Vector2( 118, -642 )
+position = Vector2( 28, -556 )
 
 [node name="Shepherd" parent="Sorted" index="6"]
-position = Vector2( -448, 832 )
+position = Vector2( -384, -72 )
 
 [node name="Camera2D" parent="Sorted/Shepherd" index="4"]
 position = Vector2( 0, 8 )
