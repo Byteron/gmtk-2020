@@ -43,5 +43,5 @@ func get_random_sheep_in_range() -> Node2D:
 
 
 func _draw() -> void:
-	draw_circle(Vector2(), menace, Color("66FF0000"))
+	# draw_circle(Vector2(), menace, Color("66FF0000"))
 	pass
