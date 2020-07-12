@@ -14,7 +14,7 @@
 [ext_resource path="res://graphics/images/grass_1.png" type="Texture" id=12]
 [ext_resource path="res://graphics/images/TREE.png" type="Texture" id=13]
 
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=9]
 0/name = "grass_1.png 0"
 0/texture = ExtResource( 12 )
 0/tex_offset = Vector2( 0, 0 )
@@ -100,19 +100,19 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 11, 56, 26, 56, 266, 245, 266, 284, 260, 294, 17, 95 )
 
-[sub_resource type="ConvexPolygonShape2D" id=4]
+[sub_resource type="ConvexPolygonShape2D" id=11]
 points = PoolVector2Array( 11, 256, 248, 60, 265, 53, 268, 91, 18, 300 )
 
-[sub_resource type="ConvexPolygonShape2D" id=5]
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 16, 96, 10, 54, 265, 55, 268, 94 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=14]
 0/name = "Fence_DD_1.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -123,14 +123,14 @@ points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 10 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -144,14 +144,14 @@ points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 4 )
+1/shape = SubResource( 11 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -165,14 +165,14 @@ points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 5 )
+2/shape = SubResource( 12 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -186,14 +186,14 @@ points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 6 )
+3/shape = SubResource( 13 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 13 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -201,7 +201,7 @@ points = PoolVector2Array( 32, 288, 10, 288, 10, 57, 32, 58, 32, 288 )
 [sub_resource type="ConvexPolygonShape2D" id=8]
 points = PoolVector2Array( 0, 869.28, 389.624, 622.176, 887.288, 881.376, 889, 1109.47, 377.528, 1299 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=15]
 0/name = "TREE.png 0"
 0/texture = ExtResource( 13 )
 0/tex_offset = Vector2( 0, 0 )
@@ -231,7 +231,7 @@ script = ExtResource( 2 )
 autostart = true
 
 [node name="Floor" type="TileMap" parent="."]
-tile_set = SubResource( 1 )
+tile_set = SubResource( 9 )
 cell_size = Vector2( 400, 400 )
 cell_tile_origin = 1
 cell_y_sort = true
@@ -243,23 +243,29 @@ format = 1
 
 [node name="Sorted" type="YSort" parent="."]
 
-[node name="Fences1" type="TileMap" parent="Sorted"]
-tile_set = SubResource( 7 )
+[node name="Fences1" type="TileMap" parent="Sorted" groups=[
+"Obstacle",
+]]
+tile_set = SubResource( 14 )
 cell_size = Vector2( 237, 195 )
 cell_tile_origin = 1
 cell_y_sort = true
 format = 1
 
-[node name="Fences2" type="TileMap" parent="Sorted"]
-tile_set = SubResource( 7 )
+[node name="Fences2" type="TileMap" parent="Sorted" groups=[
+"Obstacle",
+]]
+tile_set = SubResource( 14 )
 cell_size = Vector2( 237, 195 )
 cell_tile_origin = 1
 cell_y_sort = true
 format = 1
 
-[node name="Trees" type="TileMap" parent="Sorted"]
+[node name="Trees" type="TileMap" parent="Sorted" groups=[
+"Obstacle",
+]]
 scale = Vector2( 0.3, 0.3 )
-tile_set = SubResource( 2 )
+tile_set = SubResource( 15 )
 cell_size = Vector2( 650, 500 )
 cell_half_offset = 3
 cell_tile_origin = 2
